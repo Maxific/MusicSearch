@@ -1,6 +1,10 @@
 body {
-  background-color: #037459;
-  color: white;
+  /* background-color: #037459; */
+  
+  background: url(https://img.freepik.com/free-photo/musical-background-with-musical-keys-yellow-flat-lay-copy-space_169016-16399.jpg?w=996&t=st=1668967791~exp=1668968391~hmac=dbf8d0dcdff24155fd80f5369634242a63f50f5d98c10bce6a3ad0b0d4e9e824) no-repeat;
+  background-size: cover;
+  height: 100%;
+  color: rgb(16, 23, 25);
   font-family: 'Roboto', sans-serif;
 }
 
@@ -16,6 +20,13 @@ body {
 
 input {
   margin: 7px;
+  padding: 10px;
+  padding:15px;
+  border-radius:15px;
+  border:0;
+  box-shadow:4px 4px 10px rgba(0,0,0,0.06);
+  font-size: 18px;
+  font-family:Georgia, 'Times New Roman', Times, serif
 }
 
 footer {
@@ -29,9 +40,9 @@ footer {
   width: 100px;
   height: 34px;
   font-family: 'Roboto', sans-serif;
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 2.5px;
+  font-size: 14px;
+  /* text-transform: uppercase; */
+  /* letter-spacing: 2.5px; */
   font-weight: 500;
   color: #000;
   background-color: #fff;
@@ -58,7 +69,7 @@ footer {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #27c083;
+  background-color: #e9d010;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -104,7 +115,7 @@ footer {
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
-  width: 700px;
+  width: 90%;
 }
 
 .img {
@@ -121,11 +132,21 @@ footer {
   margin: 10px;
   display: flex;
   flex-direction: column;
+  border: 5px solid;
+  border-top: none; 
+  border-bottom: none; 
+  border-radius: 30px/90px;
+  padding: 20px;
 }
 
 .album a {
-  color: #3edb9c;
+  color: #25dbe8;
 }
+
+.album h2 {
+  height: 100%;
+}
+
 
 /* Componente Album */
 
@@ -143,11 +164,46 @@ ul {
 .fav {
   display: flex;
   flex-direction: column;
+  border: 5px solid;
+  border-top-left-radius: 100% 20px; 
+  border-bottom-right-radius: 100% 20px;
+  padding: 20px;
+  margin: 10px;
 }
 
 .labelFav {
   margin-top: 15px;
 }
+
+.labelFav input[type='checkbox'] {
+  width: 15px;
+  height: 15px;
+}
+
+audio:hover, audio:focus, audio:active
+{
+-webkit-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+-moz-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+-webkit-transform: scale(1.05);
+-moz-transform: scale(1.05);
+transform: scale(1.05);
+}
+
+audio
+{
+-webkit-transition:all 0.5s linear;
+-moz-transition:all 0.5s linear;
+-o-transition:all 0.5s linear;
+transition:all 0.5s linear;
+-moz-box-shadow: 2px 2px 4px 0px #006773;
+-webkit-box-shadow:  2px 2px 4px 0px #006773;
+box-shadow: 2px 2px 4px 0px #006773;
+-moz-border-radius:7px 7px 7px 7px ;
+-webkit-border-radius:7px 7px 7px 7px ;
+border-radius:7px 7px 7px 7px ;
+}
+
 
 /* Componente Favorites */
 
@@ -164,6 +220,12 @@ ul {
 }
 
 .songFav {
+  
+  border: 5px solid;
+  border-top-left-radius: 100% 20px; 
+  border-bottom-right-radius: 100% 20px;
+  margin: 10px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
 }
@@ -186,9 +248,22 @@ ul {
   align-items: center;
 }
 
+
 .info {
+  width: 300px;
+  height: 200px;
   line-height: 0.9;
 }
+
+.info h4 {
+  font-size: 16px;
+}
+
+.info h5 {
+  font-size: 16px;
+}
+
+
 
 .divProfile a {
   color: #3edb9c;
@@ -197,6 +272,7 @@ ul {
 .imgProfile {
   width: 200px;
   margin-top: 20px;
+  font-size: 24px;
 }
 
 /* Componente ProfileEdit */
@@ -205,6 +281,7 @@ ul {
   width: 200px;
   margin-top: 20px;
   margin-left: 30px;
+  font-size: 24px;
 }
 
 .editProfile {
@@ -218,7 +295,7 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;   
-    align-items: stretch;
+    align-items: flex-end;
 }
 
 .divButton {
@@ -226,4 +303,17 @@ ul {
   flex-direction: column;
   justify-content: space-between;   
   align-items: center;
+}
+
+.albumsContainer {
+  width: 1200px;
+}
+
+.teste {
+  width: 150px;
+  height: 150px;
+}
+
+.divProfile a {
+  color: black;
 }

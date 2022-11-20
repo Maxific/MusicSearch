@@ -6,7 +6,7 @@ class ListAlbums extends React.Component {
   render() {
     const { response, artistInput } = this.props;
     return (
-      <div>
+      <div className="albumsContainer">
         <p className="result">
           Результаты альбомов:
           {' '}
@@ -16,15 +16,19 @@ class ListAlbums extends React.Component {
         <div className="listAlbums">
           { response.map((album, index) => (
             <div key={ index } className="album">
-              <img src={ album.artworkUrl100 } alt="Album" className="img" />
+             <Link 
+                to={ `/album/${album.collectionId}` }
+                data-testid={ `link-to-album-${album.collectionId}` }> 
+                <img src={ album.artworkUrl100 } alt="Album" className="img" />
+             </Link>
               <h2>{album.collectionName}</h2>
               <h3>{album.artistName}</h3>
-              <Link
+              {/* <Link
                 to={ `/album/${album.collectionId}` }
                 data-testid={ `link-to-album-${album.collectionId}` }
               >
                Более
-              </Link>
+              </Link> */}
             </div>
           )) }
         </div>

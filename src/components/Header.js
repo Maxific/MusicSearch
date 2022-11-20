@@ -8,7 +8,7 @@ class Header extends React.Component {
     super();
 
     this.state = {
-      nome: '',
+      name: '',
       loading: false,
     };
   }
@@ -17,19 +17,19 @@ class Header extends React.Component {
     this.setState({ loading: true });
     const user = await getUser();
     this.setState({
-      nome: user.name,
+      name: user.name,
       loading: false,
     });
   }
 
   render() {
-    const { nome, loading } = this.state;
+    const { name, loading } = this.state;
     return (
       <header data-testid="header-component">
         {loading ? <Loading />
           : (
             <div className="header">
-              <h3 data-testid="header-user-name" className="name">{ nome }</h3>
+              <h3 data-testid="header-user-name" className="name">{ name }</h3>
               <nav>
                 <Link to="/search" data-testid="link-to-search">Поиск</Link>
                 <Link to="/favorites" data-testid="link-to-favorites"> Избранное</Link>
