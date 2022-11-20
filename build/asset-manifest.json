@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/MusicSearch/static/css/main.82977a73.css",
+    "main.js": "/MusicSearch/static/js/main.0cfe72fe.js",
+    "index.html": "/MusicSearch/index.html",
+    "main.82977a73.css.map": "/MusicSearch/static/css/main.82977a73.css.map",
+    "main.0cfe72fe.js.map": "/MusicSearch/static/js/main.0cfe72fe.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.82977a73.css",
+    "static/js/main.0cfe72fe.js"
+  ]
+}
